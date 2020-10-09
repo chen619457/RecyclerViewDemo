@@ -27,6 +27,7 @@ class FruitAdapter (val fruitList: List<Fruit>):RecyclerView.Adapter<FruitAdapte
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val fruit = fruitList[position]
         holder.fruitImage.setImageResource(fruit.imageId)
+
         holder.fruitName.text=fruit.name
         holder.fruitTime.text=getTime()
 
