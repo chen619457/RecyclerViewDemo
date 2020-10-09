@@ -33,7 +33,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initFruits()
-        RecyclerViewTest.layoutManager=LinearLayoutManager(this)
+        val layoutManager=LinearLayoutManager(this)
+        layoutManager.orientation=LinearLayoutManager.HORIZONTAL
+        RecyclerViewTest.layoutManager=layoutManager
         val adapter=FruitAdapter(fruitList)
         RecyclerViewTest.adapter=adapter
 
